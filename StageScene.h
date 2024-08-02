@@ -5,6 +5,7 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "Bullet.h"
+#include"cal.h"
 #include <vector>
 #include <memory>
 
@@ -22,5 +23,8 @@ private:
 	Player* player_ = nullptr;
 	std::vector<Enemy*> enemies_;
 	size_t activeEnemyCount_ = 0;
-
+	bool CheckCollision(const Vector2& bulletPos, const Vector2& enemyPos);
+	void HandleCollisionsRecursive(std::vector<Bullet*>& bullets, size_t bulletIndex, size_t enemyIndex);
 };
+
+void OnEnemyHit(Enemy* enemy);

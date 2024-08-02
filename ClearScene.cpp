@@ -5,12 +5,14 @@ void ClearScene::Init(){}
 void ClearScene::Update(char keys[], char preKeys[])
 {
 	//Spaceキー
-	if (!preKeys[DIK_SPACE] && keys[DIK_SPACE]) {
+	if (!preKeys[DIK_C] && keys[DIK_C]) {
 		sceneNo = TITLE;
 	}
 }
 
 void ClearScene::Draw()
 {
-	Novice::ScreenPrintf(640, 360, "Clear");
+	Novice::ScreenPrintf(400, 360, "Clear");
+	Novice::ScreenPrintf(400, 380, "Press the 'C' key to return to the title screen.");
+
 }

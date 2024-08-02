@@ -8,7 +8,7 @@ Bullet::Bullet(Vector2 pos)
 void Bullet::Update()
 {
     pos_.x += speed_;
-    if (pos_.x > 1280) { // Assuming screen width is 800
+    if (pos_.x > 1280) {
         active_ = false;
     }
 }
@@ -16,6 +16,6 @@ void Bullet::Update()
 void Bullet::Draw()
 {
     if (active_) {
-        Novice::DrawBox(int(pos_.x), int(pos_.y), 20, 20, 0.0f, WHITE, kFillModeSolid);
+        Novice::DrawBox(int(pos_.x), int(pos_.y), 20, 20, 0.0f, BLUE, kFillModeSolid);
     }
 }

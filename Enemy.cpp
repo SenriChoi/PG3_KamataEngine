@@ -1,7 +1,7 @@
 #include "Enemy.h"
 
 Enemy::Enemy(Vector2 pos)
-    : pos_(pos), speed_(10.0f), active_(true), direction_(1.0f)
+    : pos_(pos), speed_(10.0f), active_(true), hitCallback_(nullptr), direction_(1.0f)
 {
    
 }
@@ -21,5 +21,12 @@ void Enemy::Draw()
 {
     if (active_) {
         Novice::DrawBox(int(pos_.x), int(pos_.y), 50, 50, 0.0f, RED, kFillModeSolid);
+    }
+}
+
+void Enemy::Deactivate() {
+    active_ = false;
+    if (hitCallback_) {
+        hitCallback_(this);
     }
 }
