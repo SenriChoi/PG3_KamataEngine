@@ -124,7 +124,7 @@ void StageScene::Update(char keys[], char preKeys[])
 void StageScene::Draw()
 {
     Novice::DrawBox(0, 0, 1280, 720, 0.0f, BLACK, kFillModeSolid);//bg
-	Novice::ScreenPrintf(640, 360, "Stage");
+	Novice::ScreenPrintf(440, 360, "Press the'Space' Key to shoot");
 	player_->Draw();
 
 	for (Enemy* enemy : enemies_) {
