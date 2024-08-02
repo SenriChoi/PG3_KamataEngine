@@ -9,7 +9,6 @@ void ClearScene::Update(char keys[], char preKeys[])
 		sceneNo = TITLE;
 	}
 }
-
 void ClearScene::Draw()
 {
 	Novice::ScreenPrintf(400, 360, "Clear");
